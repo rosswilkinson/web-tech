@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" id="standardStyles" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Home - Chollerton Tearoom</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Home page for Chollerton Tearooms">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+    <script type="text/javascript">
+        //<![CDATA[
+        function offerAppear(id, id2, state) {
+            'use strict';
+            var element = document.getElementById(id);
+            var element2 = document.getElementById(id2);
+            element.style.visibility = state;
+            element2.style.visibility = state;
+
+        }
+
+        function cssFile() {
+            var element3 = document.getElementById('changeCSS');
+            var cssString = document.getElementById('standardStyles');
+
+            if (cssString.href.endsWith('style.css')) {
+                element3.innerHTML = 'Normal colours <i class="fa fa-adjust"></i>';
+                document.getElementById('standardStyles').href = 'highContrast.css';
+            } else {
+                element3.innerHTML = 'High contrast <i class="fa fa-adjust"></i>';
+                document.getElementById('standardStyles').href = 'style.css';
+            }
+        }
+        
+        function changeFontSize( id, size) {
+            var element4 = document.getElementById( id);
+            element4.style.fontSize = size;
+        }
+
+        //]]>
+    </script>
+
+</head>
+
+<body id="mainBody">
+
+    <!-- Container div contains main content of website + adds margins. -->
+    <div class="container">
+        <header>
+            <div class="top-banner">
+                    <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">High contrast 
+                <i class="fa fa-adjust"></i>
+            </a>
+                <p class="access-bar" onclick=""> | </p>
+                    <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%')">Increase text size <i class="fa fa-text-height"></i>
+            </a>
+                <p class="access-bar" onclick=""> | </p>
+                    <a class="access-bar pointer" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%')">Decrease text size <i class="fa fa-text-height"></i>
+            </a>
+            </div>
+
+
+            <!-- Header logo -->
+            <img class="banner-image" alt="Chollerton Tearooms full logo" src="images/chollerton-logo-2.png">
+
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li class="currentpage"><a href="index.html" tabindex="1" accesskey="h" title="Home page" class="currentpage">Home</a></li>
+                    <li><a href="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page">Find out more</a></li>
+                    <li><a href="offer.html" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
+                    <li><a href="notavailable.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
+                    <li><a href="notavailable.html" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
+                    <li><a href="wireframe.html" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main content -->
+        <main>
+
+            <!-- Introduction -->
+            <div class="content-box-1 spacer">
+                <h1>Home</h1>
+                <div class="blue-content-box spacer">
+                    <p><b>Welcome to Chollerton Tearooms website.</b></br>
+                        Hover over each image to view our offers. <i class="fa fa-hand-o-down"></i> </p>
+                </div>
+            </div>
+            <!-- First column -->
+            <div class="content-box-2">
+
+                <div onmouseover="offerAppear('offer-tea','offer-bg-tea', 'visible')" onmouseout="offerAppear('offer-tea','offer-bg-tea','hidden')" class="homepage-tea">
+                    <div id="offer-bg-tea" class="homepage-blue-cover">
+                    </div>
+                    <h2 class="homepage-offer-h2" id="offer-tea">Tea and biscuits for 2</br><em>&pound;5.95</em></br><span>       
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                    </span></h2>
+
+                </div>
+
+                <div onmouseover="offerAppear('offer-afternoon','offer-bg-afternoon', 'visible')" onmouseout="offerAppear('offer-afternoon','offer-bg-afternoon', 'hidden')" class="homepage-afternoon spacer">
+                    <div id="offer-bg-afternoon" class="homepage-blue-cover">
+                    </div>
+                    <h2 class="homepage-offer-h2" id="offer-afternoon">Afternoon tea</br><em>&pound;12.95</em></br><span>       
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                    </span></h2>
+
+                </div>
+
+            </div>
+
+            <!-- Second column -->
+            <div class="content-box-2">
+
+                <div onmouseover="offerAppear('offer-crafts','offer-bg-crafts', 'visible')" onmouseout="offerAppear('offer-crafts','offer-bg-crafts', 'hidden')" class="homepage-crafts" id="phone-spacer">
+                    <div id="offer-bg-crafts" class="homepage-blue-cover">
+                    </div>
+                    <h2 class="homepage-offer-h2" id="offer-crafts">Chollerton craft supplies</br><em>2 for 1</em></br><span>       
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                    </span></h2>
+
+                </div>
+
+                <div onmouseover="offerAppear('offer-bed','offer-bg-bed', 'visible')" onmouseout="offerAppear('offer-bed','offer-bg-bed', 'hidden')" class="homepage-bed spacer">
+                    <div id="offer-bg-bed" class="homepage-blue-cover">
+                    </div>
+                    <h2 class="homepage-offer-h2" id="offer-bed">Bed and breakfast</br><em>&pound;64.95</em></br><span>       
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                        <i class="fa fa-star fa-1x"></i>
+                    </span></h2>
+
+                </div>
+
+            </div>
+            <div class="content-box-1">
+                <div class="blue-content-box spacer">
+                    <h2>Our facilities</h2>
+                        <li class="facilities">Tea room</li>
+                        <li class="facilities">Craft shop</li>
+                        <li class="facilities">General village store</li>
+                        <li class="facilities">Post office</li>
+                        <li class="facilities">Bed and breakfast</li>
+                </div>
+            </div>  
+
+        </main>
+
+        <!-- Terms and conditions -->
+        <aside>
+            <div class="content-box-1">
+                <hr>
+                <div class="content-padding">
+                    <h4>Terms and conditions</h4>
+                    <p>All offers are correct as of 20/11/2015. Offers must be confirmed with a member of staff before they are available to the customer. Chollerton Tearooms reserves the right to refuse an offer. </p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- First column -->
+        <div class="container">
+            <div class="footer-box">
+                <img class="footer-logo" alt="Chollerton logo" src="images/chollerton-logo-solo-2.png">
+            </div>
+
+            <!-- Second column -->
+            <div class="footer-box footer-bg">
+                <address>
+                <b>Chollerton Tearooms</b><br />
+                Chollerton,<br />
+                North Tyne Valley,<br />
+                Tyne and Wear<br />
+                NE1 1TB
+            </address>
+                <p><a href="tel:0123456789"><i class="fa fa-phone"></i> 0123 456789</a></p>
+                <p><a href="mailto:hi@chollertontea.com"><i class="fa fa-envelope"></i> hi@chollertontea.com</a></p>
+
+            </div>
+            <!-- Copyright information -->
+            <div class="content-box-1">
+                <p class="copyright">Copyright &copy; Chollerton Tearooms 2015. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

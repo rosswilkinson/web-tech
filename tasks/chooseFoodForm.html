@@ -1,0 +1,58 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Form to choose foods that you like</title>
+</head>
+<body>
+	<form id = "chooseFood" action="chooseFoodProcess.php" method="get">
+	     <h1>Foods that you like</h1>
+	     <fieldset>
+	         <legend>About you</legend>
+	         <label for = "forename">Forename</label>
+	         <input type="text" name="forename" id="forename" accesskey="f" />
+	         <label for = "surname">Surname</label>
+	         <input type="text" name="surname" id="surname" accesskey="s" />
+	         <label for = "studyLevel">Your level of study</label>
+	         <select name="studyLevel" id="studyLevel">
+	 	<option value="3">Three</option>
+		<option value="4">Four</option>
+		<option value="5">Five</option>
+		<option value="6">Six</option>
+		<option value="7">Seven</option>
+		<option value="8">Eight</option>
+	         </select>
+	         <div>
+		Gender
+                 <label for = "genderMaleOption">Male</label> 
+	 	<input type="radio" name="gender" id="genderMaleOption" 
+	 	value="male" accesskey="m" />
+	 	<label for = "genderFemaleOption">Female</label> 
+	 	<input type="radio" name="gender" id="genderFemaleOption" 
+	 	value="female" accesskey="e" />
+	         </div>
+	     </fieldset>
+	     <fieldset>
+	         <legend>The foods that you like</legend>
+	         <p>Click the foods you like:</p>
+ 	         <label for = "breadChoice">Bread</label> 
+	         <input type="checkbox" name="bread" id="breadChoice" 
+	         value="bread" accesskey="b" />
+	         <label for = "broccoliChoice">Broccoli</label> 
+	         <input type="checkbox" name="broccoli" id="broccoliChoice" 
+	         value="broccoli" accesskey="r" />
+	         <label for = "chocolateChoice">Chocolate</label> 
+	         <input type="checkbox" name="chocolate" id="chocolateChoice" 
+	         value="chocolate" accesskey="c" />
+	         <label for = "pizzaChoice">Pizza</label> 
+	         <input type="checkbox" name="pizza" id="pizzaChoice" value="pizza" 
+	         accesskey="p" />
+	         <label for = "yoghurtChoice">Yoghurt</label> 
+	         <input type="checkbox" name="yoghurt" id="yoghurtChoice" 
+	         value="yoghurt" accesskey="y" />
+	     </fieldset>
+	     <div><input type="submit" value="Send it!" accesskey="u" />
+	     </div>
+	</form>
+</body>
+</html>

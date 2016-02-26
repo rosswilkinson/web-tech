@@ -82,6 +82,9 @@
 		 "<br /> Mobile: " . $mobileTelNo .
 		 "<br /> Email: " . $email .
 		 "<br /><br /> Receive by: " . $sendMethod ."</p>";
+    //$imageSrc = "images/$sendMethod.png";
+    $image = "<img src=\"images/$sendMethod.png\" alt=\"$sendMethod\"/>";
+    
     
     // If the preferred method of contact contains no details - it will ask user to add chosen details 
     if (empty($email) and $sendMethod == "email" or 
@@ -121,12 +124,15 @@
                          // Checks the customer's preferred method of contact and displays a relevent image
                          switch ($sendMethod) {
                              case "post":
+                                echo $image;
                                 echo "You chose post";
                                 break;
                              case "sms":
+                                echo $image;
                                 echo "You chose SMS";
                                 break; 
                             case "email":
+                                echo $image;
                                 echo "You chose email";
                                 break;
                              default:

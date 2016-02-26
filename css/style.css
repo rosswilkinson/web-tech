@@ -16,7 +16,7 @@ body {
 .homepage-tea {
     position: relative;
     width: 100%;
-    background-image: url('images/teabiscuit.jpg');
+    background-image: url('../images/teabiscuit.jpg');
     height: 300px;
     border-radius: 10px;
     background-size: cover;
@@ -25,7 +25,7 @@ body {
 .homepage-afternoon {
     position: relative;
     width: 100%;
-    background-image: url('images/afternoontea.jpg');
+    background-image: url('../images/afternoontea.jpg');
     height: 300px;
     border-radius: 10px;
     background-size: cover;
@@ -34,7 +34,7 @@ body {
 .homepage-crafts {
     position: relative;
     width: 100%;
-    background-image: url('images/crafts.jpg');
+    background-image: url('../images/crafts.jpg');
     height: 300px;
     border-radius: 10px;
     background-size: cover;
@@ -43,7 +43,7 @@ body {
 .homepage-bed {
     position: relative;
     width: 100%;
-    background-image: url('images/bandb.jpg');
+    background-image: url('../images/bandb.jpg');
     height: 300px;
     border-radius: 10px;
     background-size: cover;

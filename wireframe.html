@@ -2,61 +2,76 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/script.js"></script>
 
-	<title>Wireframe - Chollerton Tearooms</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Wireframe of Chollerton Tearooms">
-    <meta name = "viewport" content="width=device-width, maximum-scale=1.0" />
+    <title>Wireframe - Chollerton Tearooms</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Wireframe of Chollerton Tearooms" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 </head>
 
-<body>
+<body id="mainBody">
 
-<!-- Container div contains main content of website + adds margins. -->
-<div class="container">
-	<header>  
-        
-        <!-- Header logo -->
-		<img class="banner-image" alt="Chollerton Tearooms full logo" src="images/chollerton-logo-2.png">
-        
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href ="notavailable.html" tabindex="1" accesskey="h" title="Home page">Home</a></li>
-                <li><a href ="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page">Find out more</a></li>
-                <li><a href ="offer.html" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
-                <li><a href ="notavailable.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
-                <li><a href ="notavailable.html" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
-                <li class="currentpage"><a href ="wireframe.html" class="currentpage" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
-            </ul>
-        </nav>
-	</header>
-	
-    <!-- Main content -->    
-    <main>
-    
-        <!-- h1 page title for main content in a full width collumn -->    
-        <div class="content-box-1">
-            <h1>Wireframe</h1>
-        </div>
-        
-        <!-- main content in a full width collumn -->    
-        <div class="content-box-1">
-            <img class="responsive-image" alt="Wireframe for website" src="images/Wireframe.svg">
-        </div>
-        
-        <!-- Download wireframe PDF -->    
-        <div class="content-box-1 center">
-            <a class="button" href="downloads/Wireframe.pdf"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
-        </div>
-        <div class="content-box-1 center">
-            <a class="button" href="images/Wireframe.png"><i class="fa fa-file-image-o"></i> Download PNG</a>
-        </div>
+    <!-- Container div contains main content of website + adds margins. -->
+    <div class="container">
+        <header>
+            
+            <!-- Banner for sylesheet change and text adjustment -->
+            <div class="top-banner">
+                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">Inverted colours 
+                <i class="fa fa-adjust"></i>
+                </a>
+                
+                <p class="access-bar"> | </p>
+                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%'); offerAppear('fontDecrease','fontDecrease','visible');;offerAppear('fontIncrease','fontIncrease','hidden')">Increase text size <i class="fa fa-text-height"></i>
+                </a>
+                
+                <a class="access-bar pointer" style="visibility: hidden" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%'); offerAppear('fontIncrease','fontIncrease','visible'); offerAppear('fontDecrease','fontDecrease','hidden')">Decrease text size <i class="fa fa-text-height"></i>
+                </a>
+            </div>
 
-    </main>
-</div>
+            <!-- Header logo -->
+            <img class="banner-image" alt="Chollerton Tearooms full logo" src="images/chollerton-logo-2.png">
+
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html" tabindex="1" accesskey="h" title="Home page">Home</a></li>
+                    <li><a href="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page">Find out more</a></li>
+                    <li><a href="offer.html" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
+                    <li><a href="credits.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
+                    <li><a href="admin.php" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
+                    <li class="currentpage"><a href="wireframe.html" class="currentpage" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main content -->
+        <main>
+
+            <!-- h1 page title for main content in a full width collumn -->
+            <div class="content-box-1 spacer">
+                <h1>Wireframe</h1>
+            </div>
+
+            <!-- main content in a full width collumn -->
+            <div class="content-box-1">
+                <img class="responsive-image" alt="Wireframe for website" src="images/Wireframe.svg">
+            </div>
+
+            <!-- Download wireframe PDF -->
+            <div class="content-box-1 center">
+                <a class="button" href="downloads/Wireframe.pdf"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
+            </div>
+            <div class="content-box-1 center">
+                <a class="button" href="images/Wireframe.png"><i class="fa fa-file-image-o"></i> Download PNG</a>
+            </div>
+
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -88,4 +103,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -13,9 +13,9 @@ function cssFile() {
 
     if (cssString.href.endsWith('css/style.css')) {
         element3.innerHTML = 'Normal colours <i class="fa fa-adjust"></i>';
-        document.getElementById('standardStyles').href = 'css/highContrast.css';
+        document.getElementById('standardStyles').href = 'css/invertedStyle.css';
     } else {
-        element3.innerHTML = 'High contrast <i class="fa fa-adjust"></i>';
+        element3.innerHTML = 'Inverted colours <i class="fa fa-adjust"></i>';
         document.getElementById('standardStyles').href = 'css/style.css';
     }
 }

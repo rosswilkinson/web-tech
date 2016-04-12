@@ -2,31 +2,36 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css" id="standardStyles" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" >
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/script.js"></script>
 
-	<title>Special offers - Chollerton Tearoom</title>
-    <meta charset="utf-8">
-	<meta name="description" content="Special offers for Chollerton Tearooms">  
-	<meta name = "viewport" content="width=device-width, maximum-scale=1.0" />
+	<title>Special offers - Chollerton Tearooms</title>
+    <meta charset="utf-8" />
+	<meta name="description" content="Special offers for Chollerton Tearooms" />  
+	<meta name= "viewport" content="width=device-width, maximum-scale=1.0" />
 </head>
 
-<body>
+<body id="mainBody">
 
 <!-- Container div contains main content of website + adds margins. -->
 <div class="container">
     <header>
         
+        <!-- Banner for sylesheet change and text adjustment -->
         <div class="top-banner">
-            <a class="access-bar pointer" onclick="document.getElementById('standardStyles').href='css/highContrast.css'">High contrast 
+                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">Inverted colours 
                 <i class="fa fa-adjust"></i>
-            </a> 
-                <p class="access-bar" onclick=""> | </p>
-            
-            <a class="access-bar pointer">Increase text size <i class="fa fa-text-height"></i>
-            </a>
-        </div>
+                </a>
+                
+                <p class="access-bar"> | </p>
+                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%'); offerAppear('fontDecrease','fontDecrease','visible');;offerAppear('fontIncrease','fontIncrease','hidden')">Increase text size <i class="fa fa-text-height"></i>
+                </a>
+                
+                <a class="access-bar pointer" style="visibility: hidden" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%'); offerAppear('fontIncrease','fontIncrease','visible'); offerAppear('fontDecrease','fontDecrease','hidden')">Decrease text size <i class="fa fa-text-height"></i>
+                </a>
+            </div>
         
         <!-- Header logo -->
 		<img class="banner-image" alt="Chollerton Tearooms full logo" src="images/chollerton-logo-2.png">
@@ -37,8 +42,8 @@
                 <li><a href ="index.html" tabindex="1" accesskey="h" title="Home page">Home</a></li>
                 <li><a href ="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page">Find out more</a></li>
                 <li class="currentpage"><a href ="offer.html" class="currentpage" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
-                <li><a href ="notavailable.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
-                <li><a href ="notavailable.html" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
+                <li><a href ="credits.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
+                <li><a href ="admin.php" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
                 <li><a href ="wireframe.html" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
             </ul>
         </nav>
@@ -55,7 +60,7 @@
             <!-- First column -->    
             <div class="content-box-2">
                 <div class="blue-offer">
-                    <h2>Bed and breakfast<br><em>&pound;64.95pp</em></h2>
+                    <h2>Bed and breakfast<br /><em>&pound;64.95pp</em></h2>
                     <span>
                         <i class="fa fa-star fa-1x"></i>
                         <i class="fa fa-star fa-1x"></i>
@@ -67,7 +72,7 @@
                 <img class="responsive-image blue-offer-image" alt="Bed and breakfast" src="images/bandb.jpg">
         
                 <div class="blue-offer spacer">
-                    <h2>Tea and biscuits for 2<br><em>&pound;5.95</em></h2>
+                    <h2>Tea and biscuits for 2<br /><em>&pound;5.95</em></h2>
                     <span>       
                         <i class="fa fa-star fa-1x"></i>
                         <i class="fa fa-star fa-1x"></i>
@@ -80,7 +85,7 @@
             <!-- Second column -->    
             <div class="content-box-2">
                 <div class="blue-offer" id="phone-spacer">
-                    <h2>Afternoon tea for 2<br><em>&pound;12.95</em></h2>
+                    <h2>Afternoon tea for 2<br /><em>&pound;12.95</em></h2>
                     <span>
                         <i class="fa fa-star fa-1x"></i>
                         <i class="fa fa-star fa-1x"></i>
@@ -91,7 +96,7 @@
                 <img class="responsive-image blue-offer-image" alt="Afternoon tea" src="images/afternoontea.jpg">
         
                 <div class="blue-offer spacer">
-                    <h2>Chollerton craft supplies<br><em>2 for 1</em></h2>
+                    <h2>Chollerton craft supplies<br /><em>2 for 1</em></h2>
                     <span>
                         <i class="fa fa-star fa-1x"></i>
                         <i class="fa fa-star fa-1x"></i>

@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <script type="text/javascript" src="js/script.js"></script>
 
-    <title>Find out more - Chollerton Tearoom</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Find out more about Chollerton Tearooms">
+    <title>Find out more - Chollerton Tearooms</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Find out more about Chollerton Tearooms" />
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 </head>
 
@@ -42,8 +42,8 @@
                     <li><a href="index.html" tabindex="1" accesskey="h" title="Home page">Home</a></li>
                     <li class="currentpage"><a href="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page" class="currentpage">Find out more</a></li>
                     <li><a href="offer.html" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
-                    <li><a href="notavailable.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
-                    <li><a href="notavailable.html" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
+                    <li><a href="credits.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
+                    <li><a href="admin.php" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
                     <li><a href="wireframe.html" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
                 </ul>
             </nav>
@@ -52,49 +52,53 @@
         <!-- Main content -->
         <main>
 
-            <!-- FInd out more -->
+            <!-- Find out more -->
             <div class="content-box-1 spacer">
                 <h1>Find out more</h1>
-
-                <p class="spacer">
-                    The form should contain appropriate accessibility features and guidance for users on how to fill out the form, including specifying which fields that are required, i.e. where you want the user to always enter data / make a choice (those that you don’t consider optional). Note that the guidance should indicate that at least two appropriate fields must be completed. You should ensure you add your name and
-                </p>
-                <p class="spacer">Options marked with a * must be filled in. You must also provide at least one contact option. </p>
+                    <p class="spacer"><em>Options marked with a * must be completed.</em> You must provide your first name, surname and provide details of at least one contact method, by selecting the method using the drop down menu. Please read the terms and conditions before you approve and submit. </p>
+                
                 <div class="blue-content-box spacer">
                     <form action="findoutmore-confirm.php" method="post" id="findoutmoreForm">
                         <fieldset>
                             <legend>
-                                <h2>Stay updated with Chollerton Tearooms</h2></legend>
-                            <label for="forename">Forename:*
+                                Stay updated with Chollerton Tearooms</legend>
+                            <label for="forename">Forename:* <br />
                                 <input type="text" id="forename" name="forename" tabindex="7" accesskey="n" required/>
-                            </label>
-                            <label for="surname">Surname:*
+                                </label>
+                            
+                            <label for="surname">Surname:* <br />
                                 <input type="text" id="surname" name="surname" tabindex="8" accesskey="s" required/>
                             </label>
-                            <label for="email">Email Address:
-                                <input type="email" id="email" name="email" tabindex="9" accesskey="e" />
+                            
+                            <label for="emailID">Email Address: <br />
+                                <input type="email" id="emailID" name="emailID" tabindex="9" accesskey="e" />
                             </label>
-                            <label for="landLineTelNo">Telephone:
+                            
+                            <label for="landLineTelNo">Telephone: <br />
                                 <input type="tel" id="landLineTelNo" name="landLineTelNo" tabindex="10" accesskey="t" />
                             </label>
-                            <label for="mobileTelNo">Mobile:
+                            
+                            <label for="mobileTelNo">Mobile: <br />
                                 <input type="tel" id="mobileTelNo" name="mobileTelNo" tabindex="11" accesskey="m" />
                             </label>
-                            <label for="postalAddress">Address:
+                            
+                            <label for="postalAddress">Address: <br />
                                 <input type="text" id="postalAddress" name="postalAddress" tabindex="12" accesskey="d" />
                             </label>
-                            <label for="postCode">Postcode:
+                            
+                            <label for="postCode">Postcode: <br />
                                 <input type="text" id="postCode" name="postCode" tabindex="12" accesskey="p" />
                             </label>
+                            
                             <label for="sendMethod">Contact by:
-                                <select name="sendMethod">
+                                <select id="sendMethod" name="sendMethod">
                                     <option id="post" value="post">Letter</option>
                                     <option id="email" value="email">Email</option>
                                     <option id="sms" value="sms">SMS</option>
                                 </select>
                             </label>
 
-                            <label for="terms">Accept terms and conditions?
+                            <label for="terms">Accept terms and conditions?*
                                 <input type="checkbox" id="terms" value="terms" name="terms" tabindex="17" accesskey="2" required />
                             </label>
                         </fieldset>

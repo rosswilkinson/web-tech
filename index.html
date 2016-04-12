@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" id="standardStyles" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,900italic" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <script type="text/javascript" src="js/script.js"></script>
 
-    <title>Home - Chollerton Tearoom</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Home page for Chollerton Tearooms">
+    <title>Home - Chollerton Tearooms</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Home page for Chollerton Tearooms" />
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
 </head>
@@ -20,15 +20,16 @@
     <div class="container">
         <header>
             <div class="top-banner">
-                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">High contrast 
+                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">Inverted colours 
                 <i class="fa fa-adjust"></i>
-            </a>
-                <p class="access-bar" onclick=""> | </p>
-                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%')">Increase text size <i class="fa fa-text-height"></i>
-            </a>
-                <p class="access-bar" onclick=""> | </p>
-                <a class="access-bar pointer" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%')">Decrease text size <i class="fa fa-text-height"></i>
-            </a>
+                </a>
+                
+                <p class="access-bar"> | </p>
+                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%'); offerAppear('fontDecrease','fontDecrease','visible');;offerAppear('fontIncrease','fontIncrease','hidden')">Increase text size <i class="fa fa-text-height"></i>
+                </a>
+                
+                <a class="access-bar pointer" style="visibility: hidden" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%'); offerAppear('fontIncrease','fontIncrease','visible'); offerAppear('fontDecrease','fontDecrease','hidden')">Decrease text size <i class="fa fa-text-height"></i>
+                </a>
             </div>
 
 
@@ -41,8 +42,8 @@
                     <li class="currentpage"><a href="index.html" tabindex="1" accesskey="h" title="Home page" class="currentpage">Home</a></li>
                     <li><a href="findoutmore.html" tabindex="2" accesskey="f" title="Find out more page">Find out more</a></li>
                     <li><a href="offer.html" tabindex="3" accesskey="o" title="Offers page">Offer</a></li>
-                    <li><a href="notavailable.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
-                    <li><a href="notavailable.html" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
+                    <li><a href="credits.html" tabindex="4" accesskey="c" title="Credits page">Credits</a></li>
+                    <li><a href="admin.php" tabindex="5" accesskey="a" title="Admin page">Admin</a></li>
                     <li><a href="wireframe.html" tabindex="6" accesskey="w" title="Wireframe page">Wireframe</a></li>
                 </ul>
             </nav>
@@ -55,8 +56,8 @@
             <div class="content-box-1 spacer">
                 <h1>Home</h1>
                 <div class="blue-content-box spacer">
-                    <p><b>Welcome to Chollerton Tearooms website.</b></br>
-                        Hover over each image to view our offers. <i class="fa fa-hand-o-down"></i> </p>
+                    <p><b>Welcome to Chollerton Tearooms website.</b><br />
+                        Hover over each image to find out about our facilities and new offers. <i class="fa fa-hand-o-down"></i> </p>
                 </div>
             </div>
             <!-- First column -->
@@ -65,22 +66,15 @@
                 <div onmouseover="offerAppear('offer-tea','offer-bg-tea', 'visible')" onmouseout="offerAppear('offer-tea','offer-bg-tea','hidden')" class="homepage-tea">
                     <div id="offer-bg-tea" class="homepage-blue-cover">
                     </div>
-                    <h2 class="homepage-offer-h2" id="offer-tea">Tea and biscuits for 2</br><em>&pound;5.95</em></br><span>       
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                    </span></h2>
+                        <h2 class="homepage-offer-h2" id="offer-tea">Our tearoom, post office and general store are loved by many.   
+                        </h2>
 
                 </div>
 
                 <div onmouseover="offerAppear('offer-afternoon','offer-bg-afternoon', 'visible')" onmouseout="offerAppear('offer-afternoon','offer-bg-afternoon', 'hidden')" class="homepage-afternoon spacer">
                     <div id="offer-bg-afternoon" class="homepage-blue-cover">
                     </div>
-                    <h2 class="homepage-offer-h2" id="offer-afternoon">Afternoon tea</br><em>&pound;12.95</em></br><span>       
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                    </span></h2>
+                    <h2 class="homepage-offer-h2" id="offer-afternoon">Meal offer: Afternoon tea<br /><em>&pound;12.95</em></h2>
 
                 </div>
 
@@ -92,24 +86,14 @@
                 <div onmouseover="offerAppear('offer-crafts','offer-bg-crafts', 'visible')" onmouseout="offerAppear('offer-crafts','offer-bg-crafts', 'hidden')" class="homepage-crafts" id="phone-spacer">
                     <div id="offer-bg-crafts" class="homepage-blue-cover">
                     </div>
-                    <h2 class="homepage-offer-h2" id="offer-crafts">Chollerton craft supplies</br><em>2 for 1</em></br><span>       
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                    </span></h2>
+                    <h2 class="homepage-offer-h2" id="offer-crafts">We are home to the biggest craft shop in Chollerton.</h2>
 
                 </div>
 
                 <div onmouseover="offerAppear('offer-bed','offer-bg-bed', 'visible')" onmouseout="offerAppear('offer-bed','offer-bg-bed', 'hidden')" class="homepage-bed spacer">
                     <div id="offer-bg-bed" class="homepage-blue-cover">
                     </div>
-                    <h2 class="homepage-offer-h2" id="offer-bed">Bed and breakfast</br><em>&pound;64.95</em></br><span>       
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                        <i class="fa fa-star fa-1x"></i>
-                    </span></h2>
+                    <h2 class="homepage-offer-h2" id="offer-bed">Our bed and breakfast has a four star rating.</h2>
 
                 </div>
 
@@ -117,11 +101,13 @@
             <div class="content-box-1">
                 <div class="blue-content-box spacer">
                     <h2>Our facilities</h2>
+                    <ul>
                     <li class="facilities">Tea room</li>
                     <li class="facilities">Craft shop</li>
                     <li class="facilities">General village store</li>
                     <li class="facilities">Post office</li>
                     <li class="facilities">Bed and breakfast</li>
+                    </ul>
                 </div>
             </div>
 

@@ -88,7 +88,7 @@
     // If the preferred method of contact contains no details - it will ask user to add chosen details 
     if (empty($email) and $sendMethod == "email" or 
         empty($postalAddress) and $sendMethod == "post" or empty($mobileTelNo) and $sendMethod == "sms") {
-        echo "<p>You selected $sendMethod and didnt add $sendMethod details.</p>";
+        echo "<p>You selected $sendMethod and did not add $sendMethod details.</p>";
         
     }
                         

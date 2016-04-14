@@ -19,17 +19,16 @@
     <div class="container">
         <header>
             <div class="top-banner">
-
-                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">High contrast 
+                <a class="access-bar pointer" id="changeCSS" onclick="cssFile();">Inverted colours 
                 <i class="fa fa-adjust"></i>
-            </a>
-
+                </a>
+                
                 <p class="access-bar"> | </p>
-                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%')">Increase text size <i class="fa fa-text-height"></i>
-            </a>
-                <p class="access-bar"> | </p>
-                <a class="access-bar pointer" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%')">Decrease text size <i class="fa fa-text-height"></i>
-            </a>
+                <a class="access-bar pointer" id="fontIncrease" onmousedown="changeFontSize('mainBody','100%'); offerAppear('fontDecrease','fontDecrease','visible');;offerAppear('fontIncrease','fontIncrease','hidden')">Increase text size <i class="fa fa-text-height"></i>
+                </a>
+                
+                <a class="access-bar pointer" style="visibility: hidden" id="fontDecrease" onmousedown="changeFontSize('mainBody','63.5%'); offerAppear('fontIncrease','fontIncrease','visible'); offerAppear('fontDecrease','fontDecrease','hidden')">Decrease text size <i class="fa fa-text-height"></i>
+                </a>
             </div>
 
 

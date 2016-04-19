@@ -94,17 +94,6 @@
             </div>
 
         </main>
-
-        <!-- Terms and conditions -->
-        <aside>
-            <div class="content-box-1">
-                <hr>
-                <div class="content-padding">
-                    <h4>Terms and conditions</h4>
-                    <p>All offers are correct as of 20/11/2015. Offers must be confirmed with a member of staff before they are available to the customer. Chollerton Tearooms reserves the right to refuse an offer. </p>
-                </div>
-            </div>
-        </aside>
     </div>
 
     <!-- Footer -->

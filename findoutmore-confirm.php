@@ -70,6 +70,7 @@
     $mobileTelNo = $_POST['mobileTelNo'];
     $email = $_POST['emailID'];
     $sendMethod = $_POST['sendMethod'];
+    $terms = $_POST['terms'];
     $confirmation = '<p class="spacer">Thank you. You have submitted the following information:</p><br />';
     $missingContact = "<p>Sorry, the request you submitted did
     not include contact details. Please try again.";
@@ -88,8 +89,14 @@
     // If the preferred method of contact contains no details - it will ask user to add chosen details 
     if (empty($email) and $sendMethod == "email" or 
         empty($postalAddress) and $sendMethod == "post" or empty($mobileTelNo) and $sendMethod == "sms") {
-        echo "<p>You selected $sendMethod and did not add $sendMethod details.</p>";
+        echo "<p>You selected $sendMethod and did not add $sendMethod details. Please go back and enter the required details.</p>";
         
+    }
+    elseif (empty($forename) or empty($surname)) {
+        echo "<p>You must enter your first name and surname to submit.</p>";
+    }
+    elseif(!($terms == 'terms')){
+        echo "<p>You must accept our terms and conditions.</p>";
     }
                         
     else {

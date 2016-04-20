@@ -61,7 +61,7 @@
     // Create connection and test
     include 'database_conn.php';
     
-    // Form parameters
+    // Form parameters - Adds slashes before any ' charachters that would make the form submit fail
     $forename = mysqli_escape_string($conn, $_POST['forename']);
     $surname = mysqli_escape_string($conn, $_POST['surname']); 
     $postalAddress = mysqli_escape_string($conn, $_POST['postalAddress']); 
@@ -73,33 +73,38 @@
     $confirmation = '<p class="spacer">Thank you. You have submitted the following information:</p><br />';
     $missingContact = "<p>Sorry, the request you submitted did
     not include contact details. Please try again.";
+    
+    // Removes the slashes as this information is displayed to the user
     $toString = "<p>" . stripslashes($forename) . " " . stripslashes($surname) . 
 		 "<br /> Address: " . stripslashes($postalAddress) . 
 		 "<br /> Landline: " . $landLineTelNo . 
 		 "<br /> Mobile: " . $mobileTelNo .
 		 "<br /> Email: " . $email .
 		 "<br /><br /> Receive by: " . $sendMethod ."</p>";
-    // Displays an image relevent to the send method;
+    
+    // Displays an image relevent to the send method
     $image = "<img class='responsive-image' src='images/$sendMethod.png' alt='$sendMethod' />";
     
     
-    // If the preferred method of contact contains no details - it will ask user to add chosen details 
+    // If the preferred method of contact contains no details - it will ask user to add those details 
     if (empty($email) and $sendMethod == "email" or 
         empty($postalAddress) and $sendMethod == "post" or 
         empty($mobileTelNo) and $sendMethod == "sms") {
         echo "<p>You selected $sendMethod and did not add $sendMethod details. Please go back and enter the required details.</p>";
         
     }
+    // Checks if the forename and surname is present as they are required
     elseif (empty($forename) or empty($surname)) {
         echo "<p>You must enter your first name and surname to submit.</p>";
     }
+    // Checks if the terms have been ticked as this is required
     elseif(!($terms == 'terms')){
         echo "<p>You must accept our terms and conditions.</p>";
     }
                         
     else {
     
-    // Chooses input and adds values from findoutmore form
+    // Chooses input and adds values from findoutmore form 
         $input = "INSERT INTO CT_expressedInterest (forename, surname, postalAddress, 
                                                 landLineTelNo, mobileTelNo, email, sendMethod) 
     

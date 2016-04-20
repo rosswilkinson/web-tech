@@ -61,7 +61,7 @@
 	include 'database_conn.php';
 
     // Chooses fields and adds matching value from database
-	$fields = "SELECT forename, surname, postalAddress, postCode, landLineTelNo, mobileTelNo, email, sendMethod 
+	$fields = "SELECT forename, surname, postalAddress, landLineTelNo, mobileTelNo, email, sendMethod 
 			   FROM CT_expressedInterest";
     
     // Checks connection and fields or stops if connection error
@@ -72,14 +72,13 @@
            $forename = $row['forename']; 
            $surname = $row['surname']; 
            $postalAddress = $row['postalAddress']; 
-           $postCode = $row['postCode'];
            $landLineTelNo = $row['landLineTelNo'];
            $mobileTelNo = $row['mobileTelNo'];
    	 	   $email = $row['email'];
            $sendMethod = $row['sendMethod'];
 	
              echo "<div class=\"content-box-2 spacer\"><p><b>$forename $surname</b>
-             <br /> Address: $postalAddress $postCode
+             <br /> Address: $postalAddress
 			 <br /> Landline: $landLineTelNo 
 			 <br /> Mobile: $mobileTelNo
 			 <br /> Email: $email

@@ -65,7 +65,6 @@
     $forename = mysqli_escape_string($conn, $_POST['forename']);
     $surname = mysqli_escape_string($conn, $_POST['surname']); 
     $postalAddress = mysqli_escape_string($conn, $_POST['postalAddress']); 
-	$postCode = mysqli_escape_string($conn, $_POST['postCode']);
     $landLineTelNo = $_POST['landLineTelNo'];
     $mobileTelNo = $_POST['mobileTelNo'];
     $email = $_POST['emailID'];
@@ -74,10 +73,8 @@
     $confirmation = '<p class="spacer">Thank you. You have submitted the following information:</p><br />';
     $missingContact = "<p>Sorry, the request you submitted did
     not include contact details. Please try again.";
-    $toString = "<p>" . stripslashes($forename) . 
-		 " " . stripslashes($surname) . 
-		 "<br />" . stripslashes($postalAddress) . 
-		 "<br />" . stripslashes($postCode) . 
+    $toString = "<p>" . stripslashes($forename) . " " . stripslashes($surname) . 
+		 "<br /> Address: " . stripslashes($postalAddress) . 
 		 "<br /> Landline: " . $landLineTelNo . 
 		 "<br /> Mobile: " . $mobileTelNo .
 		 "<br /> Email: " . $email .
@@ -88,7 +85,8 @@
     
     // If the preferred method of contact contains no details - it will ask user to add chosen details 
     if (empty($email) and $sendMethod == "email" or 
-        empty($postalAddress) and $sendMethod == "post" or empty($mobileTelNo) and $sendMethod == "sms") {
+        empty($postalAddress) and $sendMethod == "post" or 
+        empty($mobileTelNo) and $sendMethod == "sms") {
         echo "<p>You selected $sendMethod and did not add $sendMethod details. Please go back and enter the required details.</p>";
         
     }
@@ -103,10 +101,10 @@
     
     // Chooses input and adds values from findoutmore form
         $input = "INSERT INTO CT_expressedInterest (forename, surname, postalAddress, 
-                                                postCode, landLineTelNo, mobileTelNo, email, sendMethod) 
+                                                landLineTelNo, mobileTelNo, email, sendMethod) 
     
         VALUES ('$forename','$surname','$postalAddress', 
-                '$postCode','$landLineTelNo','$mobileTelNo',
+                '$landLineTelNo','$mobileTelNo',
                 '$email','$sendMethod')";
     
     // if connection to database is present then the entry will be added and confirmed to user. If no connection an error will be shown
